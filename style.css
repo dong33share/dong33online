@@ -232,10 +232,8 @@ dialog h2{font-size:34px;margin-bottom:18px}
 dialog p{color:var(--muted)}
 .close{position:absolute;right:16px;top:16px;width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:22px;line-height:1;transition:background .3s,transform .4s var(--ease)}
 .close:hover{background:var(--bg);transform:rotate(90deg)}
-#video-dialog.has-video{width:min(960px,calc(100% - 32px))}
-#video-dialog.has-video .video-pending,#video-dialog.has-video .dialog-note{display:none}
-.video-embed{position:relative;aspect-ratio:16/9;margin:8px 0 28px;border-radius:16px;overflow:hidden;background:var(--forest)}
-.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-player{position:relative;aspect-ratio:16/9;border-radius:23px;overflow:hidden;background:var(--forest)}
+.video-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .dialog-note{margin-block:24px 28px;padding:16px 18px;border-radius:14px;background:var(--bg);border-left:3px solid var(--lime-deep);font-size:14px}
 
 /* Reveal */
@@ -277,7 +275,7 @@ dialog p{color:var(--muted)}
   .hero-actions{flex-direction:column}
   .hero-actions .button{width:100%}
   .video-frame{padding:6px;border-radius:22px;transform:none}
-  .video-cover{border-radius:17px}
+  .video-cover,.video-player{border-radius:17px}
   .play{width:62px;height:62px}
   .play span{width:46px;height:46px;font-size:14px}
   .play{left:36px;bottom:34px}.video-status{left:72px;bottom:22px;font-size:11px;padding:4px 10px}

@@ -7,19 +7,26 @@ function youtubeId(url){
   const match = String(url||'').match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/);
   return match ? match[1] : null;
 }
+let introVideoId = null;
 function applyIntroVideo(url){
   const id = youtubeId(url);
-  if(!id) return;
-  const dialog = document.getElementById('video-dialog');
-  const embed = dialog.querySelector('.video-embed');
+  if(!id || document.querySelector('.video-player')) return;
+  introVideoId = id;
   const cover = document.querySelector('.video-cover img');
-  dialog.classList.add('has-video');
-  embed.hidden = false;
-  embed.dataset.id = id;
   cover.onerror = () => { cover.onerror = null; cover.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`; };
   cover.src = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
   cover.alt = 'Video giới thiệu Đông 33';
   document.querySelector('.video-status').lastChild.textContent = 'Xem video giới thiệu';
+}
+// Có video: thay ảnh bìa bằng trình phát YouTube ngay tại chỗ và phát luôn
+function playIntroVideo(){
+  const cover = document.querySelector('.video-cover');
+  if(!cover) return;
+  const player = document.createElement('div');
+  player.className = 'video-player';
+  player.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${introVideoId}?autoplay=1&rel=0&playsinline=1" title="Video giới thiệu Đông 33" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+  cover.replaceWith(player);
+  player.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'center'});
 }
 function loadIntroVideo(){
   try{ applyIntroVideo(localStorage.getItem(VIDEO_CACHE_KEY)); }catch(err){}
@@ -34,12 +41,12 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Dialogs
 const dialogs = [...document.querySelectorAll('dialog')];
-function openDialog(id){const dialog=document.getElementById(id);dialog.showModal();document.body.classList.add('modal-open');
-  const embed=dialog.querySelector('.video-embed');
-  if(embed&&embed.dataset.id&&!embed.firstChild){embed.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${embed.dataset.id}?autoplay=1&rel=0" title="Video giới thiệu Đông 33" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;}
+function openDialog(id){
+  if(id==='video-dialog' && introVideoId){ playIntroVideo(); return; }
+  const dialog=document.getElementById(id);dialog.showModal();document.body.classList.add('modal-open');
 }
 document.querySelectorAll('[data-dialog]').forEach(button=>button.addEventListener('click',()=>openDialog(button.dataset.dialog)));
-dialogs.forEach(dialog=>{dialog.querySelectorAll('.close,.dismiss').forEach(button=>button.addEventListener('click',()=>dialog.close()));dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});dialog.addEventListener('close',()=>{const embed=dialog.querySelector('.video-embed');if(embed)embed.innerHTML='';if(!document.querySelector('dialog[open]'))document.body.classList.remove('modal-open');});});
+dialogs.forEach(dialog=>{dialog.querySelectorAll('.close,.dismiss').forEach(button=>button.addEventListener('click',()=>dialog.close()));dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});dialog.addEventListener('close',()=>{if(!document.querySelector('dialog[open]'))document.body.classList.remove('modal-open');});});
 
 // Opt-in form: validate, send to Google Sheet, then show the thank-you popup
 const form = document.getElementById('dang-ky');
