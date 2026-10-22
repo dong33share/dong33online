@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Định Giá Sinh Mệnh · 2 bước cùng Đông | Đông33</title>
+  <meta name="description" content="2 bước để tính số tiền bảo hiểm gia đình bạn cần và mức phí tham khảo theo tuổi.">
+  <meta name="theme-color" content="#f3f2ee">
+  <link rel="canonical" href="https://dong33.online/dinh-gia/">
+  <link rel="preload" href="/assets/fonts/nexa-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/product-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/funnel.css">
+</head>
+<body>
+  <header>
+    <div class="wrap quiz-top">
+      <a class="brand" href="/">Đông<span>33.</span></a>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+  </header>
+
+  <main class="stage">
+    <!-- Bước 1: số tiền bảo hiểm -->
+    <section class="screen" data-screen="monthly" data-p="4" data-count="Bước 1 · 1/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Chào bạn, mình là Đông. Bạn cứ ước chừng nha.</p></div>
+      <span class="label">Bước 1 · Câu 1 / 4</span>
+      <h1>Bạn đóng góp bao nhiêu vào chi phí duy trì mức sống của gia đình hiện nay?</h1>
+      <p class="hint">Phần bạn đang lo mỗi tháng: ăn uống, học phí của con, điện nước, đi lại, phụ giúp bố mẹ…</p>
+      <div class="money">
+        <div class="money-field"><input id="monthly" inputmode="numeric" autocomplete="off" placeholder="20" aria-label="Số tiền mỗi tháng, đơn vị triệu đồng"><span class="unit">triệu/tháng</span></div>
+        <div class="chips" data-chips="monthly"><button class="chip" type="button">10</button><button class="chip" type="button">15</button><button class="chip" type="button">20</button><button class="chip" type="button">30</button><button class="chip" type="button">50</button></div>
+      </div>
+      <div class="next-row"><button class="btn btn-dark" type="button" data-next="monthly" disabled>Tiếp tục</button></div>
+    </section>
+
+    <section class="screen" data-screen="insA" data-p="13" data-count="Bước 1 · 1/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Khoan tính tiếp nha. Mình muốn bạn nhìn con số này một chút.</p></div>
+      <span class="label">Điều bạn đang làm mỗi ngày</span>
+      <div class="insight-big" id="insABig"></div>
+      <p class="insight-sub">mỗi năm bạn đang lo, để cả nhà sống như bây giờ</p>
+      <div class="flow"><span>Thu nhập</span><b aria-hidden="true">→</b><span class="mid" id="insAFlow"></span><b aria-hidden="true">→</b><span>Cả nhà</span></div>
+      <p class="insight-text">Học phí của con, bữa cơm, tiền điện nước, quà biếu bố mẹ… tất cả đang chạy bằng một nguồn: thu nhập của bạn. Vì bạn đi làm đều đặn, nên khoản này hiếm khi phải nghĩ tới.</p>
+      <p class="insight-q">Nếu nguồn đó tạm dừng, cả nhà cần nó thêm bao lâu?</p>
+      <div class="next-row"><button class="btn btn-dark" type="button" data-go="years">Tiếp tục</button></div>
+    </section>
+
+    <section class="screen" data-screen="years" data-p="22" data-count="Bước 1 · 2/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Câu này hơi khó trả lời thẳng, nên mình thử hình dung một chút nha.</p></div>
+      <span class="label">Bước 1 · Câu 2 / 4</span>
+      <h2>Bạn muốn công ty bảo hiểm thay bạn bù đắp chi phí sống của gia đình trong bao lâu?</h2>
+      <p class="hint">Hình dung bạn đi một chuyến thật xa và tạm dừng tạo thu nhập.</p>
+      <div class="options">
+        <button class="option" type="button" data-pick="years" data-value="5">5 năm<small>Vợ/chồng có thu nhập ổn định, con đã lớn</small></button>
+        <button class="option" type="button" data-pick="years" data-value="7">7 năm<small>Mức cân bằng, phù hợp nhiều gia đình</small></button>
+        <button class="option" type="button" data-pick="years" data-value="10">10 năm<small>Con còn nhỏ, cả nhà dựa nhiều vào bạn</small></button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="insB" data-p="31" data-count="Bước 1 · 2/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Mình chọn 10 năm vì 3 bạn nhỏ nhà mình còn nhỏ. Mỗi nhà một khác, không có đáp án đúng sai.</p></div>
+      <span class="label">Thời gian để cả nhà đứng vững</span>
+      <div class="insight-big" id="insBBig"></div>
+      <p class="insight-sub" id="insBSub"></p>
+      <div class="years-bar" id="yearsBar"></div>
+      <div class="years-legend"><span>Năm 1</span><span id="yearsEnd"></span></div>
+      <p class="insight-text" id="insBText"></p>
+      <p class="insight-q">Đây không phải tiền để giàu thêm. Đây là tiền để mọi thứ không phải thay đổi.</p>
+      <div class="next-row"><button class="btn btn-dark" type="button" data-go="debt">Tiếp tục</button></div>
+    </section>
+
+    <section class="screen" data-screen="debt" data-p="40" data-count="Bước 1 · 3/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Nhiều người quên khoản này. Thu nhập tạm dừng thì khoản vay vẫn còn đó.</p></div>
+      <span class="label">Bước 1 · Câu 3 / 4</span>
+      <h2>Bạn có khoản vay nào muốn gia đình không phải gánh tiếp?</h2>
+      <p class="hint">Vay mua nhà, mua xe, vay kinh doanh…</p>
+      <div class="options two">
+        <button class="option" type="button" data-pick="hasDebt" data-value="no">Không có</button>
+        <button class="option" type="button" data-pick="hasDebt" data-value="yes">Có</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="debtAmount" data-p="48" data-count="Bước 1 · 3/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Con số ước chừng là đủ rồi.</p></div>
+      <span class="label">Bước 1 · Câu 3 / 4</span>
+      <h2>Tổng dư nợ còn lại khoảng bao nhiêu?</h2>
+      <div class="money">
+        <div class="money-field"><input id="debtAmount" inputmode="numeric" autocomplete="off" placeholder="500" aria-label="Tổng dư nợ, đơn vị triệu đồng"><span class="unit">triệu</span></div>
+        <div class="chips" data-chips="debtAmount"><button class="chip" type="button">200</button><button class="chip" type="button">500</button><button class="chip" type="button">1000</button><button class="chip" type="button">2000</button></div>
+      </div>
+      <div class="next-row"><button class="btn btn-dark" type="button" data-next="debtAmount" disabled>Tiếp tục</button></div>
+    </section>
+
+    <section class="screen" data-screen="insC" data-p="52" data-count="Bước 1 · 3/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Khoản này hay bị bỏ quên nhất khi mọi người tính bảo hiểm.</p></div>
+      <span class="label">Khoản không tự dừng lại</span>
+      <div class="insight-big" id="insCBig"></div>
+      <p class="insight-sub">dư nợ gia đình sẽ phải gánh tiếp</p>
+      <p class="insight-text">Thu nhập có thể tạm dừng, nhưng lịch trả nợ thì không. Nếu chưa có khoản dự phòng, gia đình có thể phải bán nhà, bán xe để trả nợ, đúng lúc khó khăn nhất.</p>
+      <p class="insight-q">Tính khoản này vào số tiền bảo hiểm, nợ được trả dứt điểm và tài sản ở lại với gia đình.</p>
+      <div class="next-row"><button class="btn btn-dark" type="button" data-go="existing">Tiếp tục</button></div>
+    </section>
+
+    <section class="screen" data-screen="existing" data-p="60" data-count="Bước 1 · 4/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Câu cuối của bước 1 nè. Có hợp đồng rồi thì mình trừ ra, để không tính trùng.</p></div>
+      <span class="label">Bước 1 · Câu 4 / 4</span>
+      <h2>Bạn đã có hợp đồng bảo hiểm nhân thọ nào chưa?</h2>
+      <div class="options">
+        <button class="option" type="button" data-pick="existing" data-value="no">Chưa có</button>
+        <button class="option" type="button" data-pick="existing" data-value="yes">Có, tôi biết số tiền bảo hiểm</button>
+        <button class="option" type="button" data-pick="existing" data-value="unsure">Có, nhưng không nhớ rõ<small>Kết quả sẽ chưa trừ phần này</small></button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="existingAmount" data-p="66" data-count="Bước 1 · 4/4">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Bạn cộng các hợp đồng mà bạn là người được bảo hiểm nha.</p></div>
+      <span class="label">Bước 1 · Câu 4 / 4</span>
+      <h2>Tổng số tiền bảo hiểm sinh mệnh bạn đang có?</h2>
+      <p class="hint">Cộng các hợp đồng đứng tên bạn là người được bảo hiểm.</p>
+      <div class="money">
+        <div class="money-field"><input id="existingAmount" inputmode="numeric" autocomplete="off" placeholder="500" aria-label="Số tiền bảo hiểm đang có, đơn vị triệu đồng"><span class="unit">triệu</span></div>
+        <div class="chips" data-chips="existingAmount"><button class="chip" type="button">300</button><button class="chip" type="button">500</button><button class="chip" type="button">1000</button></div>
+      </div>
+      <div class="next-row"><button class="btn btn-dark" type="button" data-next="existingAmount" disabled>Xem số tiền bảo hiểm</button></div>
+    </section>
+
+    <!-- Kết quả bước 1 -->
+    <section class="screen" data-screen="sum" data-p="74" data-count="Kết quả bước 1">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p id="sumSay">Đây là con số mình tính từ chính câu trả lời của bạn.</p></div>
+      <span class="label">Kết quả định giá</span>
+      <h2 id="resultTitle">Số tiền bảo hiểm bạn nên có</h2>
+      <div class="result-card">
+        <div class="result-head">
+          <span class="label">Quyền lợi sinh mệnh &amp; thương tật toàn bộ vĩnh viễn</span>
+          <div class="big" id="sumAssured">0</div>
+          <p id="sumNote"></p>
+        </div>
+        <div class="rows" id="rows"></div>
+        <div class="coverage" id="coverage" hidden></div>
+      </div>
+      <div class="aha" id="ahaSum">
+        <span class="label">Điều ít ai để ý</span>
+        <h3>Con số này cần có ngay, không phải 20 năm nữa.</h3>
+        <p>Tự tiết kiệm phải mất nhiều năm mới tích đủ <strong class="js-sum"></strong>. Nhưng thu nhập có thể tạm dừng vào bất kỳ năm nào, kể cả năm đầu tiên.</p>
+        <div class="compare">
+          <div><div class="lbl"><span>Tự tiết kiệm</span><b>tích dần từng năm</b></div><div class="bars" id="barsSave"></div></div>
+          <div><div class="lbl"><span>Bảo hiểm nhân thọ</span><b>đủ ngay từ năm đầu</b></div><div class="bars full" id="barsIns"></div></div>
+        </div>
+        <p>Bảo hiểm nhân thọ làm điều ngược lại: bạn đóng một phần nhỏ mỗi năm, còn <strong class="js-sum"></strong> sẵn sàng cho gia đình từ khi hợp đồng có hiệu lực. <strong>Đó là vai trò đầu tiên của nó: giữ thu nhập thay bạn.</strong></p>
+      </div>
+      <p class="teach" id="unsureNote" hidden>Bạn chưa nhớ rõ hợp đồng đang có, nên kết quả chưa trừ phần này. <a href="/khao-sat/">Kiểm tra hợp đồng trong 2 phút →</a></p>
+      <div id="askFee">
+        <h3 style="margin-top:38px;font-size:24px">“Phần nhỏ mỗi năm” đó là bao nhiêu?</h3>
+        <p class="hint">Bạn có muốn xem mức phí cho số tiền này? Bước 2 chỉ 2 câu: giới tính và tuổi.</p>
+        <div class="next-row">
+          <button class="btn btn-primary" type="button" id="toFee">Tính phí cho mình <span aria-hidden="true">→</span></button>
+          <button class="back" type="button" data-offer="tu-van">Chưa cần, mình muốn nói chuyện với Đông</button>
+        </div>
+      </div>
+      <div class="offers" id="coveredOffers" hidden>
+        <button class="offer" type="button" data-offer="tu-van"><h3>Soát lại hợp đồng đang có</h3><p>30 phút với mình để xem điều kiện chi trả và thời hạn.</p><span class="arrow" aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <!-- Bước 2: mức phí -->
+    <section class="screen" data-screen="gender" data-p="80" data-count="Bước 2 · 1/2">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Phí bảo hiểm tính theo giới tính và tuổi, nên mình hỏi thêm 2 câu nữa thôi.</p></div>
+      <span class="label">Bước 2 · Câu 1 / 2</span>
+      <h2>Bạn là nam hay nữ?</h2>
+      <p class="hint">Mức phí bảo hiểm được tính theo giới tính và tuổi.</p>
+      <div class="options two">
+        <button class="option" type="button" data-pick="gender" data-value="male">Nam</button>
+        <button class="option" type="button" data-pick="gender" data-value="female">Nữ</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="age" data-p="90" data-count="Bước 2 · 2/2">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Cho mình biết tuổi của bạn nhé.</p></div>
+      <span class="label">Bước 2 · Câu 2 / 2</span>
+      <h2>Năm nay bạn bao nhiêu tuổi?</h2>
+      <div class="money">
+        <div class="money-field"><input id="age" inputmode="numeric" autocomplete="off" placeholder="35" maxlength="2" aria-label="Tuổi"><span class="unit">tuổi</span></div>
+        <p class="hint" id="ageHint">Bài test dành cho người từ 18 đến 65 tuổi.</p>
+      </div>
+      <div class="next-row"><button class="btn btn-dark" type="button" data-next="age" disabled>Xem mức phí</button></div>
+    </section>
+
+    <!-- Kết quả bước 2 -->
+    <section class="screen" data-screen="fee" data-p="100" data-count="Kết quả">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Đây là mức phí tham khảo cho số tiền bảo hiểm của bạn.</p></div>
+      <span class="label">Mức phí tham khảo</span>
+      <h2 id="feeTitle"></h2>
+      <div class="result-card">
+        <div class="premium" style="border-top:0">
+          <div><span class="label">Phí / năm</span><b id="pYear"></b></div>
+          <div><span class="label">≈ mỗi tháng</span><b id="pMonth"></b></div>
+          <div><span class="label">≈ mỗi ngày</span><b id="pDay"></b></div>
+        </div>
+      </div>
+      <p class="teach">Không cần đủ ngay từ đầu. Nhiều gia đình bắt đầu ở mức phí vừa sức, rồi rà soát và bổ sung mỗi 3–5 năm khi thu nhập và gia đình thay đổi.</p>
+
+      <h3 style="margin-top:40px;font-size:24px">Bước tiếp theo, nếu bạn muốn</h3>
+      <div class="offers">
+        <button class="offer" type="button" data-offer="tu-van"><h3>Tư vấn cụ thể hơn</h3><p>30 phút với mình để soát lại các con số và chọn mức vừa sức.</p><span class="arrow" aria-hidden="true">→</span></button>
+      </div>
+      <div class="next-row"><button class="back" type="button" id="restart">Làm lại từ đầu</button></div>
+      <p class="footnote" id="fine"></p>
+    </section>
+
+    <!-- Lead form -->
+    <section class="screen" data-screen="optin" data-p="100" data-count="Gần xong">
+      <div class="optin-box">
+        <p class="optin-pre"><b>Trò chuyện 1-1 cùng Đông,</b> qua điện thoại hoặc online, chừng 30 phút. Giúp bạn trả lời:</p>
+        <h2 class="optin-h">Cùng tham gia bảo hiểm, tại sao có người <u>an tâm vui sống</u>, nhưng cũng có người lo lắng bất an?</h2>
+        <p class="optin-sub">Để lại tên và số Zalo, mình sẽ nhắn bạn. <b>Hoàn toàn miễn phí.</b></p>
+        <form class="optin-form" id="optinForm" novalidate>
+          <input name="name" autocomplete="name" placeholder="Tên của bạn" aria-label="Tên của bạn" maxlength="100" required>
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Số điện thoại / Zalo" aria-label="Số điện thoại hoặc Zalo" maxlength="24" required>
+          <button class="btn btn-primary btn-block" type="submit">Tôi cần tư vấn thêm</button>
+          <p class="status" role="status" aria-live="polite"></p>
+          <p class="consent">Chưa cần quyết định mua. Thông tin của bạn không chia sẻ cho bên khác.</p>
+        </form>
+      </div>
+      <div class="optin-more">
+        <div class="optin-person"><img src="/assets/dong-avatar.jpg?v=5" alt="Nguyễn Lê Đông" width="96" height="96"><div><b>Nguyễn Lê Đông</b><span>Senior Unit Manager<br>Manulife Việt Nam</span></div></div>
+        <div class="optin-list">
+          <h3>Bạn sẽ nhận được trong cuộc trò chuyện:</h3>
+          <ul>
+            <li>Hiểu rõ bạn có nên tham gia bảo hiểm nhân thọ hay không</li>
+            <li>Những sai lầm thường gặp khiến hợp đồng không bảo vệ được như mong đợi</li>
+            <li>Quy trình từng bước: tìm hiểu, thiết kế, triển khai và sử dụng</li>
+            <li>Phí đóng của bạn đi đâu, và mang lại điều gì cho bạn</li>
+            <li>Cấu trúc tài chính 3A1B, để tiết kiệm có định hướng</li>
+            <li>Mọi thắc mắc được giải đáp trung thực, rõ ràng, thay vì mất hàng giờ đọc nội dung hỗn tạp trên mạng</li>
+          </ul>
+          <p class="optin-quote">“Bảo hiểm không chỉ là một giải pháp tài chính, mà là cách một người trụ cột thể hiện tình yêu và trách nhiệm dành cho những người thân thương.”</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="next-row"><button class="back" type="button" id="back" hidden>← Quay lại</button></div>
+  </main>
+
+  <script src="/assets/lead.js"></script>
+  <script>
+    // Hệ số nhân bảo hiểm TỐI ĐA theo tuổi (Số tiền bảo hiểm ÷ Phí bảo hiểm cơ bản quy năm), Manulife.
+    // Hai bảng giống nhau cho Nam/Nữ; trang lấy số lớn hơn ở mỗi tuổi.
+    // Xanh Tương Lai (phiên bản 6), tuổi 0–69:
+    const MAX_XTL = [150,150,150,150,150,150,150,150,150,150, 150,150,150,150,150,150,150,150,150,150,
+      150,150,135,135,135,135,135,120,120,120, 110,110,100,100,90,85,80,80,75,70,
+      65,65,60,55,50,50,45,45,40,40, 40,35,35,30,30,30,25,25,25,20, 20,20,15,15,15,15,10,10,10,10];
+    // Xanh Phú Quý Flex, tuổi 18–69 (Nam và Nữ có cùng hệ số tối đa):
+    const MAX_FLEX = {18:150,19:150,20:150,21:150,22:135,23:135,24:135,25:135,26:135,27:120,28:120,29:120,
+      30:110,31:110,32:100,33:100,34:90,35:85,36:80,37:80,38:75,39:70,40:65,41:65,42:60,43:55,44:50,45:50,
+      46:45,47:45,48:40,49:40,50:40,51:35,52:35,53:30,54:30,55:30,56:25,57:25,58:25,59:20,60:20,61:20,
+      62:15,63:15,64:15,65:15,66:10,67:10,68:10,69:10};
+    const maxMultiplier = age => Math.max(MAX_XTL[age] || 0, MAX_FLEX[age] || 0);
+
+    const MIN_AGE = 18, MAX_AGE = 65;
+    const state = {gender:null, age:0, monthly:0, years:0, hasDebt:null, debtAmount:0, existing:null, existingAmount:0, offer:null};
+    const result = {sum:0, family:0, mult:0, perYear:0};
+
+    const screens = [...document.querySelectorAll('.screen')];
+    const backBtn = document.getElementById('back');
+    const trail = [];
+    let current = 'monthly';
+
+    function show(id, push = true) {
+      if (push && current !== id) trail.push(current);
+      current = id;
+      screens.forEach(s => s.classList.toggle('active', s.dataset.screen === id));
+      const screen = screens.find(s => s.dataset.screen === id);
+      document.getElementById('bar').style.width = Math.max(4, Number(screen.dataset.p)) + '%';
+      document.getElementById('count').textContent = screen.dataset.count;
+      backBtn.hidden = trail.length === 0 || id === 'sum' || id === 'fee';
+      window.scrollTo({top:0});
+      const focusable = screen.querySelector('input');
+      if (focusable && window.matchMedia('(hover:hover)').matches) setTimeout(() => focusable.focus({preventScroll:true}), 60);
+    }
+
+    backBtn.addEventListener('click', () => { if (trail.length) show(trail.pop(), false); });
+    document.getElementById('restart').addEventListener('click', () => { trail.length = 0; show('monthly', false); });
+
+    // ----- Number inputs (triệu đồng) -----
+    const toNumber = v => Number(String(v).replace(/\D/g, '')) || 0;
+    const groupDigits = n => n.toLocaleString('vi-VN');
+    function bindMoney(id) {
+      const input = document.getElementById(id);
+      const btn = document.querySelector(`[data-next="${id}"]`);
+      const chips = document.querySelectorAll(`[data-chips="${id}"] .chip`);
+      const sync = () => {
+        const n = toNumber(input.value);
+        if (id !== 'age') input.value = n ? groupDigits(n) : '';
+        chips.forEach(c => c.setAttribute('aria-pressed', String(toNumber(c.textContent) === n)));
+        btn.disabled = id === 'age' ? !(n >= MIN_AGE && n <= MAX_AGE) : n <= 0;
+        if (id === 'age') document.getElementById('ageHint').textContent = n && (n < MIN_AGE || n > MAX_AGE) ? 'Bài test hiện tính cho người từ 18 đến 65 tuổi.' : 'Bài test dành cho người từ 18 đến 65 tuổi.';
+      };
+      input.addEventListener('input', sync);
+      input.addEventListener('keydown', e => { if (e.key === 'Enter' && !btn.disabled) btn.click(); });
+      chips.forEach(c => c.addEventListener('click', () => { input.value = c.textContent; sync(); }));
+      chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+      return input;
+    }
+    ['age','monthly','debtAmount','existingAmount'].forEach(bindMoney);
+
+    const nextOf = {
+      age: () => { state.age = toNumber(document.getElementById('age').value); showFee(); },
+      monthly: () => { state.monthly = toNumber(document.getElementById('monthly').value); showInsA(); },
+      debtAmount: () => { state.debtAmount = toNumber(document.getElementById('debtAmount').value); showInsC(); },
+      existingAmount: () => { state.existingAmount = toNumber(document.getElementById('existingAmount').value); showSum(); }
+    };
+    document.querySelectorAll('[data-next]').forEach(b => b.addEventListener('click', () => nextOf[b.dataset.next]()));
+
+    document.querySelectorAll('[data-pick]').forEach(btn => btn.addEventListener('click', () => {
+      btn.parentElement.querySelectorAll('.option').forEach(o => o.setAttribute('aria-pressed', String(o === btn)));
+      const key = btn.dataset.pick, v = btn.dataset.value;
+      setTimeout(() => {
+        if (key === 'gender') { state.gender = v; show('age'); }
+        if (key === 'years') { state.years = Number(v); showInsB(); }
+        if (key === 'hasDebt') { state.hasDebt = v === 'yes'; if (!state.hasDebt) state.debtAmount = 0; show(state.hasDebt ? 'debtAmount' : 'existing'); }
+        if (key === 'existing') {
+          state.existing = v;
+          if (v === 'yes') show('existingAmount');
+          else { state.existingAmount = 0; showSum(); }
+        }
+      }, 220);
+    }));
+
+    // ----- Formatting -----
+    function money(trieu) {
+      if (trieu >= 1000) {
+        const ty = Math.round(trieu / 10) / 100;
+        return ty.toLocaleString('vi-VN', {maximumFractionDigits:2}) + ' tỷ';
+      }
+      return groupDigits(Math.round(trieu)) + ' triệu';
+    }
+    const vnd = n => groupDigits(Math.round(n / 1000) * 1000) + ' đ';
+
+    // ----- Màn dẫn dắt: dựng từ chính câu trả lời của khách -----
+    // Dynamic copy keeps its last two words together (no orphan words).
+    const setText = (id, t) => { document.getElementById(id).textContent = String(t).replace(/ (\S+)$/, '\u00a0$1'); };
+    document.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => show(b.dataset.go)));
+    function showInsA() {
+      setText('insABig', money(state.monthly * 12));
+      setText('insAFlow', `${groupDigits(state.monthly)} triệu/tháng`);
+      show('insA');
+    }
+    function showInsB() {
+      const family = state.monthly * 12 * state.years;
+      setText('insBBig', money(family));
+      setText('insBSub', `${groupDigits(state.monthly)} triệu × 12 tháng × ${state.years} năm`);
+      const bar = document.getElementById('yearsBar');
+      bar.style.gridTemplateColumns = `repeat(${state.years},1fr)`;
+      bar.innerHTML = Array.from({length: state.years}, (_, i) => `<i style="animation-delay:${i * 70}ms"></i>`).join('');
+      setText('yearsEnd', `Năm ${state.years}`);
+      setText('insBText', `Trong ${state.years} năm đó, con vẫn đi học ở trường quen, bữa cơm vẫn như cũ, và người thân có thời gian sắp xếp lại công việc, không phải quyết định vội vàng.`);
+      show('insB');
+    }
+    function showInsC() {
+      setText('insCBig', money(state.debtAmount));
+      show('insC');
+    }
+    function fillBars(id, full) {
+      document.getElementById(id).innerHTML = Array.from({length: 10}, (_, i) =>
+        `<i style="height:${full ? 100 : (i + 1) * 10}%;animation-delay:${i * 60}ms"></i>`).join('');
+    }
+
+    // ----- Kết quả bước 1: số tiền bảo hiểm -----
+    function showSum() {
+      result.family = state.monthly * 12 * state.years;
+      const gross = result.family + state.debtAmount;
+      const gap = Math.max(0, gross - state.existingAmount);
+      result.sum = Math.ceil(gap / 10) * 10; // làm tròn lên 10 triệu
+      result.perYear = 0;
+
+      const rows = [
+        ['Giữ nhịp sống cho gia đình', `${groupDigits(state.monthly)} triệu × 12 tháng × ${state.years} năm`, money(result.family)],
+        state.debtAmount ? ['Khoản vay cần trả hết', 'Để gia đình không gánh tiếp', money(state.debtAmount)] : null,
+        state.existingAmount ? ['Đã có từ hợp đồng hiện tại', 'Trừ ra khỏi nhu cầu', '− ' + money(state.existingAmount), 'minus'] : null
+      ].filter(Boolean);
+      document.getElementById('rows').innerHTML = rows.map(([t, s, v, cls], i) =>
+        `<div class="row ${cls || ''}" style="animation-delay:${i * 120}ms"><span>${t.replace(/ (\S+)$/, '\u00a0$1')}<small>${s}</small></span><b>${v}</b></div>`).join('');
+
+      const covered = result.sum === 0;
+      document.getElementById('resultTitle').textContent = covered ? 'Bảo vệ hiện có đã đủ cho các con số bạn nhập' : 'Số tiền bảo hiểm bạn nên có';
+      document.getElementById('sumAssured').textContent = covered ? 'Đã đủ' : money(result.sum);
+      document.getElementById('sumNote').textContent = covered
+        ? 'Nên kiểm tra thêm điều kiện chi trả và thời hạn của hợp đồng đang có.'
+        : `Tổng nhu cầu ${money(gross)}${state.existingAmount ? `, đã trừ ${money(state.existingAmount)} đang có` : ''}.`;
+      const cov = document.getElementById('coverage');
+      cov.hidden = !state.existingAmount;
+      if (state.existingAmount) {
+        const pct = Math.min(100, Math.round(state.existingAmount / gross * 100));
+        cov.innerHTML = `<p>Hợp đồng đang có lo được <b>${pct}%</b> nhu cầu${pct < 100 ? `, còn thiếu <b>${100 - pct}%</b>` : ''}.</p><div class="track"><span style="width:${pct}%"></span></div>`;
+      }
+      document.querySelectorAll('.js-sum').forEach(el => { el.textContent = money(result.sum); });
+      fillBars('barsSave', false); fillBars('barsIns', true);
+      document.getElementById('ahaSum').hidden = covered;
+      document.getElementById('askFee').hidden = covered;
+      document.getElementById('coveredOffers').hidden = !covered;
+      document.getElementById('unsureNote').hidden = state.existing !== 'unsure';
+      show('sum');
+    }
+
+    // ----- Kết quả bước 2: mức phí -----
+    function showFee() {
+      result.mult = maxMultiplier(state.age);
+      result.perYear = result.sum * 1e6 / result.mult;
+      document.getElementById('feeTitle').textContent = `Cho ${money(result.sum)} số tiền bảo hiểm, ở tuổi ${state.age}`;
+      document.getElementById('pYear').textContent = vnd(result.perYear);
+      document.getElementById('pMonth').textContent = vnd(result.perYear / 12);
+      document.getElementById('pDay').textContent = vnd(result.perYear / 365);
+      document.getElementById('fine').textContent =
+        `Phí cơ bản tham khảo theo hệ số nhân bảo hiểm tối đa ở tuổi ${state.age}, sản phẩm liên kết đơn vị Manulife. Chưa gồm sản phẩm bổ trợ; phí thực tế tuỳ kết quả thẩm định sức khoẻ.`;
+      show('fee');
+    }
+    document.getElementById('toFee').addEventListener('click', () => show('gender'));
+
+    // ----- Offers + lead -----
+    const OFFERS = {
+      'tu-van': {goal: 'Định giá sinh mệnh — Tư vấn cụ thể hơn', action: 'booking'}
+    };
+
+    function summary() {
+      return [
+        state.age ? `Giới tính: ${state.gender === 'male' ? 'Nam' : 'Nữ'} · Tuổi: ${state.age}` : 'Chưa tính phí (dừng ở bước 1)',
+        `Chi tiêu gia đình: ${state.monthly} triệu/tháng × ${state.years} năm`,
+        `Khoản vay: ${state.hasDebt ? money(state.debtAmount) : 'Không'}`,
+        `BHNT đang có: ${state.existing === 'yes' ? money(state.existingAmount) : state.existing === 'unsure' ? 'Có, không nhớ rõ' : 'Chưa có'}`,
+        `STBH đề xuất: ${result.sum ? money(result.sum) : 'Đã đủ'}`,
+        result.perYear ? `Phí tham khảo: ${vnd(result.perYear)}/năm (hệ số ${result.mult})` : ''
+      ].filter(Boolean).join('\n');
+    }
+
+    document.querySelectorAll('[data-offer]').forEach(btn => btn.addEventListener('click', () => {
+      state.offer = 'tu-van';
+      show('optin');
+    }));
+
+    function bindLeadForm(form, label) {
+      const status = form.querySelector('.status');
+      const submit = form.querySelector('[type="submit"]');
+      let sending = false;
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        if (sending) return;
+        const nameEl = form.elements.namedItem('name'), phoneEl = form.elements.namedItem('phone'), noteEl = form.elements.namedItem('note');
+        const name = nameEl.value.trim(), phone = phoneEl.value.trim(), note = noteEl ? noteEl.value.trim() : '';
+        status.textContent = '';
+        nameEl.removeAttribute('aria-invalid'); phoneEl.removeAttribute('aria-invalid');
+        if (!name) { status.textContent = 'Bạn cho mình biết tên để tiện xưng hô nhé.'; nameEl.setAttribute('aria-invalid','true'); nameEl.focus(); return; }
+        if (!Dong33Lead.validPhone(phone)) { status.textContent = 'Bạn kiểm tra lại số điện thoại/Zalo giúp mình nhé.'; phoneEl.setAttribute('aria-invalid','true'); phoneEl.focus(); return; }
+        const o = OFFERS[state.offer];
+        sending = true; submit.disabled = true; submit.textContent = 'Đang gửi…';
+        try {
+          await Dong33Lead.send(
+            {name, phone, goal: o.goal, note: [note && `Lời nhắn: ${note}`, summary()].filter(Boolean).join('\n'), source: 'dong33-dinh-gia'},
+            {action: o.action, name, phone, email: '', preferredTime: note || 'Không ghi', gender: state.gender, age: state.age,
+             hasDebt: state.hasDebt, debtAmount: state.debtAmount * 1e6, dependentMonthly: state.monthly * 1e6, years: state.years,
+             selfMonthly: 0, hasExistingInsurance: state.existing !== 'no', existingInsuranceAmount: state.existingAmount * 1e6,
+             reserveFundTotal: result.sum * 1e6, premiumMonthly: result.perYear / 12, source: 'dong33-dinh-gia'}
+          );
+          location.href = `/cam-on/?loai=${state.offer}`;
+        } catch (err) {
+          status.textContent = 'Kết nối chưa thành công. Bạn thử lại, hoặc nhắn mình qua Zalo 08 3343 1179.';
+          sending = false; submit.disabled = false; submit.textContent = label;
+        }
+      });
+    }
+    bindLeadForm(document.getElementById('optinForm'), 'Tôi cần tư vấn thêm');
+
+    Dong33Lead.noOrphans('h1,h2,h3,.hint,.teach,.offer p,.insight-text,.insight-q,.aha p,.optin-pre,.optin-sub,.optin-list li,.optin-quote');
+    show('monthly', false);
+  </script>
+</body>
+</html>

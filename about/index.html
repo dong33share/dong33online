@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Về Đông | Nguyễn Lê Đông · Trạm Bảo Hiểm</title>
+  <meta name="description" content="Hẹn Nguyễn Lê Đông 30 phút miễn phí để làm rõ nhu cầu bảo hiểm và câu hỏi về hợp đồng. Ưu tiên gặp trực tiếp; có thể trao đổi qua điện thoại hoặc video khi chưa tiện gặp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hiểu rõ bảo hiểm. Chủ động bảo vệ gia đình. | Nguyễn Lê Đông">
+  <meta property="og:description" content="Hẹn Đông 30 phút miễn phí, ưu tiên gặp trực tiếp. Cùng làm rõ câu hỏi về bảo hiểm và bước tiếp theo. Có thể trao đổi qua điện thoại hoặc video khi chưa tiện gặp.">
+  <meta name="theme-color" content="#356b4b">
+  <link rel="canonical" href="https://dong33.online/about">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--forest:#356b4b;--deep:#24402f;--ink:#111511;--ivory:#f3f2ee;--paper:#fff;--lime:#dafc67;--muted:#5c625c;--line:1.5px solid var(--ink);--grad:linear-gradient(105deg,#f5f3df 0%,#f3ef7c 48%,#a5d0cf 100%);--display:"Barlow Condensed",system-ui,sans-serif;--text:"Barlow",system-ui,sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:28px}
+    body{background:var(--ivory);color:var(--ink);font:17px/1.65 var(--text);-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-underline-offset:4px}
+    button,input,select,textarea{font:inherit}
+    button,a,input,select,textarea,summary{-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:3px solid var(--forest);outline-offset:5px}
+    .hero :focus-visible,.about :focus-visible,footer :focus-visible{outline-color:var(--lime)}
+    h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;text-wrap:balance;letter-spacing:-.01em}
+    h1{font-size:clamp(40px,5.5vw,62px);font-weight:400}
+    h1 strong{font-weight:700}
+    h2{font-size:clamp(34px,4.2vw,48px)}
+    h3{font-size:26px}
+    p,li{text-wrap:pretty}
+    .wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+    section{padding:84px 0}
+    .eyebrow,.label,label,.pill,.brand{font-family:var(--display);font-weight:600;letter-spacing:.075em;font-size:14px;line-height:1.4;text-transform:uppercase}
+    .eyebrow{display:block;color:var(--forest);margin-bottom:14px}
+    .lead{font-size:18px;line-height:1.6;max-width:700px;margin-top:20px}
+    .small{font-size:15px;line-height:1.55;color:var(--muted)}
+    .pill{display:inline-block;padding:7px 15px;border:var(--line);border-radius:999px;background:var(--grad)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:13px 27px;border:var(--line);border-radius:999px;font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.035em;text-decoration:none;cursor:pointer;line-height:1.35;transition:transform .15s,box-shadow .15s;text-align:center}
+    @media(hover:hover){.btn:hover{transform:translateY(-2px);box-shadow:4px 4px 0 var(--ink)}}
+    .btn:active{transform:translateY(0);box-shadow:1px 1px 0 var(--ink)}
+    .btn span[aria-hidden]{display:inline-block;transition:transform .2s ease}
+    @media(hover:hover){.btn:hover span[aria-hidden]{transform:translate(3px,-3px)}}
+    .btn-primary{background:var(--lime);color:var(--ink)}
+    .btn-secondary{background:transparent;color:var(--ink)}
+    .btn:disabled{opacity:.65;cursor:wait;transform:none;box-shadow:none}
+    .text-link{font-size:16px;font-weight:600}
+    .skip{position:absolute;left:20px;top:-100px;z-index:10;background:var(--lime);padding:12px 18px}
+    .skip:focus{top:10px}
+    .hero{background:var(--forest);padding:0 0 72px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:25px;color:#fff}
+    .brand{font-size:19px;letter-spacing:.04em;text-decoration:none}
+    .brand span{color:var(--lime)}
+    .topbar nav{display:flex;gap:26px;font-size:15px}
+    .topbar nav a{text-decoration:none}
+    .topbar nav a:hover{text-decoration:underline}
+    .hero-shell{padding-top:40px}
+    .hero-card{position:relative;background:var(--paper);border-radius:22px}
+    .hero-tab{position:absolute;top:-34px;left:0;background:var(--lime);padding:10px 22px 19px;border-radius:17px 17px 0 0;font-size:13px}
+    .hero-content{position:relative;border-radius:22px;background:var(--paper);padding:46px 48px 36px;display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:center}
+    .hero-intro{margin-top:22px;max-width:600px;font-size:18px}
+    .hero-ctas{display:flex;align-items:center;gap:23px;flex-wrap:wrap;margin-top:28px}
+    .hero-note{margin-top:14px;font-size:14px;color:var(--muted)}
+    .hero-person{text-align:center}
+    .hero-person img{width:180px;height:180px;object-fit:cover;object-position:50% 12%;border-radius:50%;border:var(--line);margin:0 auto 20px}
+    .hero-person .name{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.025em}
+    .hero-person .role{font-size:14px;color:var(--muted);margin-top:5px;line-height:1.55}
+    .hero-foot{border-top:1px solid #d9ddd6;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:18px 48px;font-size:14px;color:var(--muted)}
+    .hero-foot span{display:flex;align-items:center;gap:9px}
+    .hero-foot span::before{content:"";display:block;flex:none;width:7px;height:7px;background:var(--forest);border-radius:50%}
+    .needs{padding-bottom:40px}
+    .section-head{display:flex;justify-content:space-between;align-items:start;gap:28px}
+    .section-head h2{max-width:700px}
+    .needs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+    .need{padding:30px;border:var(--line);background:#fff}
+    .need .label{color:var(--forest);display:block;margin-bottom:10px}
+    .need p{margin-top:14px;font-size:16px}
+    .need a{display:inline-block;margin-top:18px}
+    .need:nth-child(2){background:#e8ede5}
+    .outcomes{padding-top:44px}
+    .outcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:38px}
+    .outcome-number{font-family:var(--display);font-size:58px;line-height:1;color:var(--forest);border-bottom:var(--line);padding-bottom:16px;margin-bottom:23px}
+    .outcome p{font-size:16px;margin-top:12px}
+    .meeting-note{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:32px;background:var(--grad);border:var(--line);border-radius:18px;padding:25px 30px}
+    .meeting-note p{max-width:570px;font-size:16px}
+    .meeting-note .btn{flex:none}
+    .guide{background:var(--deep);color:#eef2ea}
+    .guide-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:54px;align-items:start}
+    .guide .eyebrow{color:var(--lime)}
+    .guide .lead{font-size:17px}
+    .guide-aside{margin-top:28px;padding-top:24px;border-top:1px solid #738578;font-size:15px;color:#d6e1d4}
+    .guide-aside strong{color:var(--lime)}
+    .paper{background:var(--paper);border:var(--line);border-radius:18px;color:var(--ink);overflow:hidden;box-shadow:7px 7px 0 #111511}
+    .paper-heading{padding:20px 26px;background:var(--grad);border-bottom:var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .paper-heading .label{font-size:16px}
+    .paper-heading span:last-child{font-family:var(--display);font-size:30px;font-weight:600}
+    .checklist{list-style:none;padding:0 26px;counter-reset:items}
+    .checklist li{display:grid;grid-template-columns:24px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid #d8ded5;counter-increment:items}
+    .checklist li:last-child{border:0}
+    .checklist li::before{content:counter(items,decimal-leading-zero);font:600 19px/1.5 var(--display);color:var(--forest)}
+    .checklist b{font-size:16px;font-weight:600}
+    .checklist p{font-size:14px;color:var(--muted);margin-top:3px;line-height:1.5}
+    .paper-caption{font-size:13px;padding:15px 26px;background:#f5f6f2;border-top:1px solid #d8ded5;color:var(--muted)}
+    .method-grid{display:grid;grid-template-columns:300px 1fr;gap:56px}
+    .method-side p{margin-top:20px;font-size:16px}
+    .method-side figure{margin-top:28px}
+    .method-side img{width:100%;height:auto;border-radius:18px;border:var(--line)}
+    .method-side figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+    .step{padding:23px 0;border-top:var(--line);display:grid;grid-template-columns:35px 1fr;gap:18px}
+    .step:last-child{border-bottom:var(--line)}
+    .step .number{font:600 24px/1.2 var(--display);color:var(--forest)}
+    .step p{font-size:16px;margin-top:11px}
+    .step .label{display:block;color:var(--forest);margin-bottom:6px}
+    .about{background:var(--deep);color:#eef2ea;padding:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr}
+    .about-photo{align-self:center;margin-block:40px;border-radius:18px;overflow:hidden;background:#1b3325}
+    .about-photo img{width:100%;height:auto}
+    .about-photo figcaption{padding:16px 22px;color:#eef2ea;font-size:14px;line-height:1.55}
+    .about-body{padding:56px 46px}
+    .about .eyebrow{color:var(--lime)}
+    .about-body>p{margin-top:20px;font-size:16px}
+    .bio-list{list-style:none;margin-top:28px}
+    .bio-list li{padding:17px 0;border-top:1px solid #627a68;display:grid;grid-template-columns:85px 1fr;gap:17px;font-size:15px;line-height:1.5}
+    .bio-list .label{color:var(--lime);padding-top:3px}
+    .faq-grid{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start}
+    .faq-intro p{margin-top:20px;font-size:16px}
+    .faq-list{border-top:var(--line);overflow-x:clip}
+    details{border-bottom:var(--line)}
+    summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-size:18px;font-weight:600;line-height:1.5}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";flex:none;font:400 28px/1 var(--display);color:var(--forest);transition:transform .22s ease}
+    details[open] summary::after{transform:rotate(45deg)}
+    .answer{padding:0 30px 23px 0;font-size:16px}
+    .answer p+p{margin-top:12px}
+    .answer a{color:var(--forest)}
+    .apply{padding-top:0;padding-bottom:90px}
+    .apply-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start}
+    .apply-intro{padding-top:32px}
+    .apply-intro h2{max-width:360px}
+    .apply-intro>p{margin-top:22px;font-size:17px}
+    .apply-intro .direct{border-top:var(--line);padding-top:24px;margin-top:30px}
+    .direct p{font-size:15px;margin-bottom:14px}
+    .apply-card{background:var(--paper);border:var(--line);border-radius:20px;box-shadow:7px 7px 0 var(--ink);overflow:hidden;scroll-margin-top:28px}
+    .apply-top{background:var(--grad);border-bottom:var(--line);padding:26px 30px}
+    .apply-top h3{font-size:30px}
+    .apply-top p{font-size:15px;margin-top:8px}
+    form{padding:28px 30px 30px;display:grid;gap:19px}
+    label{display:block;margin-bottom:7px;letter-spacing:.04em}
+    label .optional{text-transform:none;letter-spacing:0;font-family:var(--text);font-weight:400;font-size:13px;color:var(--muted)}
+    input,select,textarea{width:100%;max-width:100%;padding:12px 13px;border:var(--line);border-radius:10px;background:var(--ivory);font-size:16px;color:var(--ink)}
+    textarea{min-height:95px;resize:vertical}
+    input[aria-invalid="true"]{border-color:#a02b1b}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    form .btn{width:100%}
+    form[aria-busy="true"] .btn::after{content:"";width:17px;height:17px;flex:none;border:2px solid currentColor;border-right-color:transparent;border-radius:50%}
+    .consent{font-size:13px;color:var(--muted);line-height:1.5}
+    .status:empty{display:none}
+    .status{font-size:15px;color:#9b2c1f;line-height:1.5}
+    .done{padding:34px 30px;text-align:center}
+    .done h3{font-size:32px}
+    .done p{margin:16px 0 24px;font-size:16px}
+    [hidden]{display:none!important}
+    footer{background:var(--forest);color:#eef2ea;padding:32px 0}
+    .footer-main{display:flex;justify-content:space-between;gap:30px;align-items:start}
+    .footer-main p{font-size:14px;margin-top:7px}
+    .footer-links{display:flex;flex-wrap:wrap;gap:22px;font-size:15px}
+    .footer-note{font-size:12px;color:#e0e9de;border-top:1px solid #769580;margin-top:25px;padding-top:17px}
+    @media(max-width:900px){
+      .hero-content{padding:35px 30px;grid-template-columns:1fr 175px;gap:25px}
+      .hero-person img{width:150px;height:150px}
+      .hero-foot{padding-inline:30px;justify-content:flex-start;gap:10px 25px}
+      .guide-grid{grid-template-columns:.8fr 1fr;gap:30px}
+      .method-grid,.faq-grid{grid-template-columns:240px 1fr;gap:32px}
+      .about-body{padding:40px 28px}
+      .apply-grid{grid-template-columns:.8fr 1.2fr;gap:30px}
+      .row2{grid-template-columns:1fr}
+      .meeting-note{align-items:start;flex-direction:column;gap:20px}
+    }
+    @media(max-width:680px){
+      body{font-size:16px}
+      .wrap{width:calc(100% - 32px)}
+      section{padding:58px 0}
+      .topbar{padding:20px 0}
+      .topbar nav{gap:18px;font-size:14px}
+      .topbar nav .nav-about{display:none}
+      .hero{padding-bottom:44px}
+      .hero-shell{padding-top:34px}
+      .hero-content{grid-template-columns:1fr;padding:26px 23px 28px;gap:24px}
+      .hero-person{order:-1;display:grid;grid-template-columns:65px 1fr;gap:15px;text-align:left;align-items:center}
+      .hero-person img{width:65px;height:65px;margin:0}
+      .hero-person .name{font-size:20px}
+      .hero-person .role{font-size:12px;margin-top:2px}
+      .hero-intro{font-size:17px;margin-top:18px}
+      .hero-ctas{gap:18px;margin-top:24px}
+      .hero-ctas .btn{width:100%}
+      .hero-ctas .text-link{width:100%;text-align:center}
+      .hero-foot{padding:18px 23px;display:grid;gap:8px;font-size:13px}
+      .section-head{display:block}
+      .section-head .pill{margin-top:18px}
+      .needs-grid,.outcome-grid,.guide-grid,.method-grid,.about-grid,.faq-grid,.apply-grid{grid-template-columns:1fr}
+      .needs{padding-bottom:28px}
+      .need{padding:24px}
+      .needs-grid{gap:16px;margin-top:26px}
+      .outcomes{padding-top:28px}
+      .outcome-grid{gap:26px;margin-top:28px}
+      .outcome{display:grid;grid-template-columns:52px 1fr;gap:18px}
+      .outcome-number{font-size:46px;padding:0;border:0;margin:0}
+      .outcome p{margin-top:9px}
+      .meeting-note{padding:23px}
+      .meeting-note .btn{width:100%}
+      .guide-grid{gap:28px}
+      .guide-aside{margin-top:20px;padding-top:18px}
+      .paper-heading{padding:18px 21px}
+      .checklist{padding:0 21px}
+      .paper-caption{padding:15px 21px}
+      .method-grid{gap:30px}
+      .method-side figure{display:none}
+      .about-photo{margin-block:32px 0}
+      .about-body{padding:37px 24px 40px}
+      .bio-list li{grid-template-columns:75px 1fr;gap:14px}
+      .faq-grid{gap:28px}
+      summary{font-size:17px;padding-block:19px}
+      .answer{padding-right:0}
+      .apply{padding-bottom:58px}
+      .apply-intro{padding-top:0}
+      .apply-intro h2{max-width:none}
+      .apply-grid{gap:28px}
+      form,.apply-top,.done{padding-inline:23px}
+      form .btn{font-size:18px;padding-inline:18px;gap:10px}
+      .footer-main{flex-direction:column;gap:22px}
+      .footer-links{gap:24px}
+    }
+    @keyframes request-spin{to{transform:rotate(360deg)}}
+    @keyframes confirmation-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:no-preference){
+      form[aria-busy="true"] .btn::after{animation:request-spin .8s linear infinite}
+      .done:not([hidden]){animation:confirmation-in .35s ease-out}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .btn,.btn span[aria-hidden],summary::after{transition:none}
+      .btn:hover,.btn:active,.btn:hover span[aria-hidden]{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#noi-dung">Đến nội dung chính</a>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="/">ĐÔNG<span>33.</span></a>
+        <nav aria-label="Điều hướng chính">
+          <a class="nav-about" href="/dinh-gia/">Định giá sinh mệnh</a>
+          <a href="#hen-dong">Hẹn Đông 30 phút ↗</a>
+        </nav>
+      </div>
+      <div class="hero-shell">
+        <div class="hero-card">
+          <div class="hero-tab label">Bảo hiểm cho người trụ cột</div>
+          <div class="hero-content">
+            <div>
+              <h1>Hiểu rõ bảo hiểm.<br><strong>Chủ động bảo vệ gia đình.</strong></h1>
+              <p class="hero-intro">Bạn đang tìm hiểu bảo hiểm, hoặc đã mua nhưng còn nhiều điều chưa rõ? Đông giúp bạn làm rõ nhu cầu, quyền lợi và những giới hạn của hợp đồng, để bạn tự tin quyết định.</p>
+              <div class="hero-ctas">
+                <a class="btn btn-primary" href="#hen-dong">Hẹn Đông 30 phút <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="#buoi-dau">Buổi đầu có gì?</a>
+              </div>
+              <p class="hero-note">Miễn phí · Ưu tiên gặp trực tiếp · Không cần quyết định mua</p>
+            </div>
+            <div class="hero-person">
+              <img src="dong.jpg" alt="Nguyễn Lê Đông" width="180" height="180" fetchpriority="high">
+              <div>
+                <div class="name">NGUYỄN LÊ ĐÔNG</div>
+                <div class="role">Sáng lập Trạm Bảo Hiểm<br>Senior Unit Manager<br>Manulife Việt Nam</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-foot">
+            <span>Bắt đầu từ nhu cầu của gia đình</span>
+            <span>Giải thích cả quyền lợi và giới hạn</span>
+            <span>Bạn quyết định bước tiếp theo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="noi-dung">
+    <section class="needs" aria-labelledby="needs-title">
+      <div class="wrap">
+        <span class="eyebrow">Bắt đầu từ câu hỏi của bạn</span>
+        <h2 id="needs-title">Bạn đang ở bước nào với bảo hiểm?</h2>
+        <div class="needs-grid">
+          <article class="need">
+            <span class="label">Đang tìm hiểu</span>
+            <h3>Muốn bảo vệ gia đình,<br>nhưng chưa biết bắt đầu từ đâu.</h3>
+            <p>Cần bảo vệ ai trước? Ưu tiên điều gì? Mức phí nào có thể duy trì? Đông cùng bạn làm rõ những câu hỏi này trước khi trao đổi về sản phẩm.</p>
+            <a class="text-link" href="#hen-dong" data-goal="new">Trao đổi về nhu cầu của gia đình →</a>
+          </article>
+          <article class="need">
+            <span class="label">Đã có hợp đồng</span>
+            <h3>Đã đóng phí,<br>nhưng chưa thật sự hiểu mình có gì.</h3>
+            <p>Đông giúp bạn đọc những phần quan trọng và xác định điểm cần hỏi lại. Với hợp đồng ngoài Manulife, Đông hỗ trợ đọc hiểu; thủ tục do hãng quản lý hợp đồng xử lý.</p>
+            <a class="text-link" href="#hen-dong" data-goal="review">Trao đổi về hợp đồng đang có →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcomes" id="buoi-dau" aria-labelledby="meeting-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Buổi trao đổi đầu tiên</span>
+            <h2 id="meeting-title">30 phút để rõ hơn<br>việc cần làm tiếp theo.</h2>
+          </div>
+          <span class="pill">Miễn phí · 1:1 với Đông</span>
+        </div>
+        <p class="lead">Bạn mang đến điều đang băn khoăn. Đông lắng nghe, đặt câu hỏi và cùng bạn xác định hướng giải quyết.</p>
+        <div class="outcome-grid">
+          <article class="outcome">
+            <div class="outcome-number" aria-hidden="true">01</div>
+            <div><h3>Rõ điều cần ưu tiên</h3><p>Cùng xác định mối lo chính của gia đình và điều bạn muốn bảo hiểm giúp giải quyết.</p></div>
+          </article>
+          <article class="outcome">
+            <div class="outcome-number" aria-hidden="true">02</div>
+            <div><h3>Rõ điều cần kiểm tra</h3><p>Khoanh vùng những câu hỏi còn bỏ ngỏ và tài liệu cần xem thêm trước khi đưa ra nhận định.</p></div>
+          </article>
+          <article class="outcome">
+            <div class="outcome-number" aria-hidden="true">03</div>
+            <div><h3>Rõ bước tiếp theo</h3><p>Thống nhất có cần một buổi đọc hợp đồng, tìm hiểu phương án bảo vệ hay thêm thời gian cân nhắc.</p></div>
+          </article>
+        </div>
+        <div class="meeting-note">
+          <p><strong>Bạn chưa cần quyết định mua bảo hiểm.</strong> Buổi đầu giúp làm rõ vấn đề và xem cách Đông làm việc có phù hợp với bạn không. Những phần cần phân tích sâu sẽ được thống nhất riêng.</p>
+          <a class="btn btn-primary" href="#hen-dong">Hẹn Đông 30 phút ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide" id="doc-hop-dong" aria-labelledby="guide-title">
+      <div class="wrap guide-grid">
+        <div>
+          <span class="eyebrow">Một cách bắt đầu thật cụ thể</span>
+          <h2 id="guide-title">Hợp đồng của bạn<br>đã rõ 5 điều này chưa?</h2>
+          <p class="lead">Bạn có thể dùng danh sách câu hỏi này để kiểm tra mức độ hiểu hợp đồng hiện tại, hoặc hỏi người đang tư vấn cho mình.</p>
+          <p class="guide-aside"><strong>Chưa rõ phần nào, bắt đầu từ phần đó.</strong><br>Khi cùng đọc hợp đồng, Đông giúp bạn tìm điều khoản liên quan và làm rõ những điểm cần xác nhận thêm với công ty bảo hiểm.</p>
+        </div>
+        <div class="paper">
+          <div class="paper-heading"><span class="label">5 câu hỏi khi đọc hợp đồng</span><span aria-hidden="true">↙</span></div>
+          <ol class="checklist">
+            <li><div><b>Ai được bảo vệ, trước những rủi ro nào?</b><p>Tìm người được bảo hiểm, các quyền lợi đang tham gia và thời hạn bảo vệ.</p></div></li>
+            <li><div><b>Chi trả bao nhiêu, trong điều kiện nào?</b><p>Đọc mức quyền lợi cùng điều kiện áp dụng và các giới hạn liên quan.</p></div></li>
+            <li><div><b>Trường hợp nào chưa hoặc không được chi trả?</b><p>Kiểm tra thời gian chờ, điều khoản loại trừ và điều kiện riêng, nếu có.</p></div></li>
+            <li><div><b>Cần đóng phí thế nào để duy trì hợp đồng?</b><p>Làm rõ mức phí, thời hạn đóng và hệ quả khi thay đổi kế hoạch đóng phí.</p></div></li>
+            <li><div><b>Khi cần sử dụng quyền lợi, bắt đầu ở đâu?</b><p>Xác định giấy tờ, cách nộp yêu cầu và kênh liên hệ của công ty bảo hiểm.</p></div></li>
+          </ol>
+          <p class="paper-caption">Danh sách câu hỏi tham khảo. Nội dung cụ thể cần đối chiếu với hợp đồng của bạn.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cach-lam-viec" aria-labelledby="method-title">
+      <div class="wrap method-grid">
+        <div class="method-side">
+          <span class="eyebrow">Cách Đông làm việc</span>
+          <h2 id="method-title">Bạn hiểu rõ.<br>Bạn quyết định.</h2>
+          <p>Bạn không cần trở thành chuyên gia bảo hiểm. Bạn cần hiểu mình có gì, giới hạn ở đâu và tìm hỗ trợ thế nào khi cần.</p>
+          <figure><img src="dong.jpg" alt="Chân dung Nguyễn Lê Đông trong áo sơ mi và cà vạt" width="429" height="447" loading="lazy"><figcaption>Nguyễn Lê Đông · Trạm Bảo Hiểm</figcaption></figure>
+        </div>
+        <div>
+          <article class="step">
+            <span class="number" aria-hidden="true">01</span>
+            <div><span class="label">Trước khi chọn sản phẩm</span><h3>Làm rõ nhu cầu và khả năng duy trì</h3><p>Ai đang phụ thuộc vào thu nhập của bạn? Điều gì gia đình cần giữ vững? Đông cùng bạn xác định ưu tiên và khả năng đóng phí trước khi xem xét phương án bảo vệ.</p></div>
+          </article>
+          <article class="step">
+            <span class="number" aria-hidden="true">02</span>
+            <div><span class="label">Khi xem xét phương án</span><h3>Đọc cả quyền lợi lẫn giới hạn</h3><p>Nếu bạn cần hợp đồng mới, Đông đề xuất phương án từ các sản phẩm Manulife theo nhu cầu đã trao đổi. Bạn được giải thích về quyền lợi, phí, điều kiện và loại trừ trước khi quyết định làm hồ sơ.</p><p>Nếu bạn đã có hợp đồng, mình bắt đầu bằng việc hiểu rõ hợp đồng hiện tại. Việc rà soát không mặc định dẫn đến mua thêm.</p></div>
+          </article>
+          <article class="step">
+            <span class="number" aria-hidden="true">03</span>
+            <div><span class="label">Khi quản lý và sử dụng hợp đồng</span><h3>Biết cách tra cứu và tìm hỗ trợ</h3><p>Đông hướng dẫn bạn đọc những phần quan trọng, tra cứu thông tin và tìm đúng kênh yêu cầu quyền lợi. Với hợp đồng do Đông tư vấn, hai bên thống nhất cách liên hệ hỗ trợ để bạn biết cần làm gì khi phát sinh câu hỏi.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="ve-dong" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <figure class="about-photo"><img src="family.jpg" alt="Đông cùng vợ và ba con trong một buổi sinh nhật" width="1600" height="1200" loading="lazy"><figcaption>Đông cùng gia đình — những người đứng sau lựa chọn làm nghề.</figcaption></figure>
+        <div class="about-body">
+          <span class="eyebrow">Nguyễn Lê Đông · Trạm Bảo Hiểm</span>
+          <h2 id="about-title">Một người cha.<br>Một người trụ cột.<br>Người cùng bạn làm rõ bảo hiểm.</h2>
+          <p>Là bố của ba con và từng làm chủ doanh nghiệp, Đông hiểu việc chuẩn bị cho gia đình cần tính đến cả những khoản chi hôm nay và trách nhiệm lâu dài.</p>
+          <ul class="bio-list">
+            <li><span class="label">Gia đình</span><span>Bố của <strong>3 người con</strong>. Trách nhiệm với người thân là điểm xuất phát trong cách Đông nhìn về bảo hiểm.</span></li>
+            <li><span class="label">Trải nghiệm</span><span><strong>12 năm tham gia bảo hiểm với vai trò khách hàng</strong>, trước khi bước vào nghề.</span></li>
+            <li><span class="label">Hiện tại</span><span>Sáng lập <strong>Trạm Bảo Hiểm</strong>.<br>Senior Unit Manager tại <strong>Manulife Việt Nam</strong>.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cau-hoi" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="faq-intro">
+          <span class="eyebrow">Trước khi hẹn</span>
+          <h2 id="faq-title">Những điều bạn có thể đang băn khoăn.</h2>
+          <p>Bạn có thể hỏi thẳng về cách làm việc, phạm vi hỗ trợ và những điều mình chưa rõ.</p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Buổi trao đổi đầu tiên có mất phí không?</summary>
+            <div class="answer"><p>Không. Buổi trao đổi 30 phút đầu tiên với Đông là miễn phí. Đông ưu tiên gặp trực tiếp để cùng bạn trao đổi và xem tài liệu. Nếu bạn ở xa hoặc chưa tiện gặp, hai bên có thể chọn điện thoại hoặc video. Sau buổi đầu, bạn quyết định có tiếp tục hay không.</p></div>
+          </details>
+          <details>
+            <summary>Chưa có ý định mua ngay thì có phù hợp không?</summary>
+            <div class="answer"><p>Có. Bạn có thể bắt đầu bằng một câu hỏi hoặc một phần hợp đồng chưa hiểu. Mục tiêu của buổi đầu là xác định điều cần làm rõ và bước tiếp theo; bạn không cần cam kết mua bảo hiểm.</p></div>
+          </details>
+          <details>
+            <summary>Hợp đồng ngoài Manulife có được hỗ trợ không?</summary>
+            <div class="answer"><p>Có. Đông có thể giúp bạn đọc hiểu nội dung và xác định những điểm cần hỏi thêm. Các thủ tục điều chỉnh, yêu cầu quyền lợi và việc xác nhận thông tin thuộc trách nhiệm của hãng quản lý hợp đồng. Đông không thay mặt hãng đó xử lý hồ sơ.</p></div>
+          </details>
+          <details>
+            <summary>Đông tư vấn sản phẩm của công ty nào?</summary>
+            <div class="answer"><p>Đông đang làm việc tại Manulife Việt Nam. Các phương án hợp đồng mới do Đông tư vấn được lựa chọn trong phạm vi sản phẩm Manulife. Bạn sẽ được biết rõ sản phẩm và đơn vị cung cấp trước khi xem xét phương án.</p></div>
+          </details>
+          <details>
+            <summary>Sau khi gửi yêu cầu, lịch hẹn được xác nhận thế nào?</summary>
+            <div class="answer"><p>Đông sẽ liên hệ qua Zalo để cùng bạn thống nhất thời gian và địa điểm gặp trực tiếp. Nếu bạn ở xa hoặc chưa tiện gặp, hai bên có thể sắp xếp trao đổi qua điện thoại hoặc video. Lịch hẹn được xác nhận khi hai bên đã thống nhất.</p></div>
+          </details>
+          <details>
+            <summary>Tôi cần chuẩn bị gì trước buổi trao đổi?</summary>
+            <div class="answer"><p>Bạn chỉ cần nghĩ về câu hỏi mình muốn làm rõ nhất. Nếu đã có hợp đồng, có thể chuẩn bị tài liệu để tiện trao đổi. Khi gửi yêu cầu hẹn, chưa cần gửi hồ sơ sức khỏe hay giấy tờ cá nhân.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="apply" id="hen-dong" aria-labelledby="apply-title">
+      <div class="wrap apply-grid">
+        <div class="apply-intro">
+          <span class="eyebrow">Bắt đầu bằng một cuộc trò chuyện</span>
+          <h2 id="apply-title">Điều gì về bảo hiểm<br>bạn muốn làm rõ?</h2>
+          <p>Để lại thông tin và câu hỏi của bạn. Đông ưu tiên một buổi gặp trực tiếp 30 phút miễn phí và sẽ liên hệ qua Zalo để cùng chọn thời gian, địa điểm phù hợp.</p>
+          <p class="small">Nếu bạn ở xa hoặc chưa tiện gặp, mình có thể trao đổi qua điện thoại hoặc video. Lịch hẹn được xác nhận khi hai bên đã thống nhất. Bạn chưa cần đưa ra quyết định mua.</p>
+          <div class="direct">
+            <p>Muốn nhắn trực tiếp trước khi hẹn?</p>
+            <a class="btn btn-secondary" href="https://zalo.me/0833431179" target="_blank" rel="noopener">Nhắn Đông qua Zalo ↗</a>
+          </div>
+        </div>
+        <div class="apply-card" id="applyCard" role="region" aria-labelledby="booking-title" tabindex="-1">
+          <div class="apply-top">
+            <h3 id="booking-title">Hẹn Đông 30 phút</h3>
+            <p>Cuộc trò chuyện online hoặc trực tiếp</p>
+          </div>
+          <form id="leadForm" novalidate>
+            <div class="row2">
+              <div><label for="name">Tên của bạn</label><input id="name" name="name" autocomplete="name" placeholder="Bạn muốn Đông gọi là…" required maxlength="100"></div>
+              <div><label for="phone">Số điện thoại / Zalo</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09 1234 5678" required maxlength="24"></div>
+            </div>
+            <div>
+              <label for="goal">Bạn muốn trao đổi về điều gì?</label>
+              <select id="goal" name="goal">
+                <option value="">Chọn nội dung phù hợp với bạn</option>
+                <option value="new">Tìm hiểu bảo hiểm cho gia đình</option>
+                <option value="review">Đọc hiểu hợp đồng đang có</option>
+                <option value="change">Rà soát khi nhu cầu gia đình thay đổi</option>
+                <option value="question">Một câu hỏi khác về bảo hiểm</option>
+              </select>
+            </div>
+            <div>
+              <label for="note">Câu hỏi của bạn <span class="optional">(không bắt buộc)</span></label>
+              <textarea id="note" name="note" placeholder="Ví dụ: Tôi đã có hợp đồng nhưng chưa rõ quyền lợi khi nằm viện." maxlength="2000"></textarea>
+            </div>
+            <p class="consent">Bằng việc gửi yêu cầu, bạn đồng ý để Đông liên hệ qua số điện thoại/Zalo đã cung cấp để trao đổi về nội dung này và sắp xếp buổi hẹn.</p>
+            <button class="btn btn-primary" type="submit">Gửi yêu cầu hẹn với Đông <span aria-hidden="true">↗</span></button>
+            <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+          <div class="done" id="formDone" tabindex="-1" hidden>
+            <h3>Cùng xác nhận lịch qua Zalo.</h3>
+            <p>Cảm ơn bạn đã đăng ký. Bạn có thể nhắn Đông để cùng thống nhất thời gian và địa điểm gặp trực tiếp, hoặc chọn điện thoại/video nếu chưa tiện gặp. Buổi hẹn được xác nhận khi hai bên đã thống nhất.</p>
+            <a class="btn btn-primary" href="https://zalo.me/0833431179" target="_blank" rel="noopener">Nhắn Đông qua Zalo ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="/">ĐÔNG<span>33.</span> · TRẠM BẢO HIỂM</a><p>Nguyễn Lê Đông · Senior Unit Manager, Manulife Việt Nam<br>Ưu tiên gặp trực tiếp · Hỗ trợ online khi cần<br>Zalo: 08 3343 1179</p></div>
+        <nav class="footer-links" aria-label="Kết nối với Đông">
+          <a href="https://zalo.me/0833431179" target="_blank" rel="noopener">Zalo ↗</a>
+          <a href="https://fb.com/@nldong33" target="_blank" rel="noopener">Facebook ↗</a>
+          <a href="https://youtube.com/@dong33.online" target="_blank" rel="noopener">YouTube ↗</a>
+        </nav>
+      </div>
+      <p class="footer-note">Trang giới thiệu cá nhân của Nguyễn Lê Đông. Quyền lợi bảo hiểm được xác định theo hợp đồng và điều khoản sản phẩm áp dụng.</p>
+    </div>
+  </footer>
+  <script>
+    // Keep the last two words of headings and short copy together (no orphan words).
+    document.querySelectorAll('h1,h2,h3,summary,.lead,.hero-intro,.need p,.outcome p,.step p,.answer p,.meeting-note p,.apply-intro>p').forEach(el => {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      let last = null;
+      while (walker.nextNode()) if (walker.currentNode.nodeValue.trim()) last = walker.currentNode;
+      if (last) last.nodeValue = last.nodeValue.replace(/\s+(\S+)\s*$/, ' $1');
+    });
+  </script>
+  <script>
+    const LEAD_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbz-1mcONnWGtDIkVCeoq77RY5ExOqxUqBX8vvn35pRDStqRZfeQEZHig3X0kxt6SX1q/exec';
+    const form = document.getElementById('leadForm');
+    const status = document.getElementById('formStatus');
+    const nameInput = form.elements.namedItem('name');
+    const phoneInput = form.elements.namedItem('phone');
+    const goalInput = form.elements.namedItem('goal');
+    const noteInput = form.elements.namedItem('note');
+    let submitting = false;
+
+    document.querySelectorAll('[data-goal]').forEach(link => {
+      link.addEventListener('click', () => { goalInput.value = link.dataset.goal; });
+    });
+
+    [nameInput, phoneInput].forEach(input => {
+      input.addEventListener('input', () => { input.removeAttribute('aria-invalid'); });
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (submitting) return;
+      status.textContent = '';
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      nameInput.removeAttribute('aria-invalid');
+      phoneInput.removeAttribute('aria-invalid');
+      if (!name) {
+        status.textContent = 'Bạn vui lòng điền tên để Đông biết cách xưng hô nhé.';
+        nameInput.setAttribute('aria-invalid', 'true');
+        nameInput.focus();
+        return;
+      }
+      const phoneDigits = phone.replace(/\D/g, '');
+      if (!/^\+?[\d\s().-]+$/.test(phone) || phoneDigits.length < 9 || phoneDigits.length > 15) {
+        status.textContent = 'Bạn vui lòng kiểm tra lại số điện thoại/Zalo để Đông có thể liên hệ.';
+        phoneInput.setAttribute('aria-invalid', 'true');
+        phoneInput.focus();
+        return;
+      }
+      const button = form.querySelector('button[type="submit"]');
+      const buttonLabel = button.innerHTML;
+      submitting = true;
+      button.disabled = true;
+      button.textContent = 'Đang gửi yêu cầu…';
+      form.setAttribute('aria-busy', 'true');
+      const payload = new URLSearchParams({
+        name, phone,
+        goal: goalInput.value ? goalInput.options[goalInput.selectedIndex].text : 'Chưa chọn nội dung',
+        note: noteInput.value.trim(),
+        source: 'dong33-about',
+        device: window.innerWidth < 768 ? 'Mobile' : window.innerWidth < 1024 ? 'Tablet' : 'Desktop',
+        page: location.href,
+        submittedAt: new Date().toISOString()
+      });
+      try {
+        // The existing Apps Script endpoint uses an opaque no-cors response.
+        // Receipt in the sheet cannot be verified here; the UI does not claim a confirmed appointment.
+        await fetch(LEAD_WEBHOOK_URL, {method:'POST', mode:'no-cors', body:payload});
+        form.hidden = true;
+        const done = document.getElementById('formDone');
+        done.hidden = false;
+        done.focus();
+      } catch (error) {
+        status.textContent = 'Kết nối chưa thành công. Bạn có thể thử lại hoặc nhắn Đông qua liên kết Zalo trên trang.';
+        button.disabled = false;
+        button.innerHTML = buttonLabel;
+      } finally {
+        submitting = false;
+        form.removeAttribute('aria-busy');
+      }
+    });
+  </script>
+  <script>
+    // Progressive enhancement: content remains visible and usable without motion or JavaScript.
+    (() => {
+      const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const active = new Set();
+      const easing = 'cubic-bezier(.2,.65,.3,1)';
+      const canAnimate = typeof Element.prototype.animate === 'function';
+      const canObserve = 'IntersectionObserver' in window;
+
+      function play(element, frames, options = {}) {
+        if (!element || preference.matches || !canAnimate) return null;
+        const animation = element.animate(frames, {duration:480, easing, ...options});
+        active.add(animation);
+        animation.finished.then(() => active.delete(animation), () => active.delete(animation));
+        return animation;
+      }
+
+      function reveal(element, delay = 0) {
+        // No hidden classes: cancellation or unsupported APIs never leave content invisible.
+        return play(element, [
+          {opacity:0.2, transform:'translateY(14px)'},
+          {opacity:1, transform:'translateY(0)'}
+        ], {delay, fill:'backwards'});
+      }
+
+      if (!location.hash) {
+        ['.hero h1', '.hero-intro', '.hero-ctas', '.hero-note', '.hero-person'].forEach((selector, index) => {
+          reveal(document.querySelector(selector), index * 65);
+        });
+      }
+
+      // Reveal each reading unit once. Stagger only siblings entering the viewport together.
+      let revealObserver;
+      if (canObserve && canAnimate && !preference.matches) {
+        revealObserver = new IntersectionObserver(entries => {
+          const groups = new Map();
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const parent = entry.target.parentElement;
+            const order = groups.get(parent) || 0;
+            groups.set(parent, order + 1);
+            reveal(entry.target, Math.min(order * 70, 210));
+            revealObserver.unobserve(entry.target);
+          });
+        }, {threshold:0.12});
+        document.querySelectorAll('.need, .outcome, .checklist li, .step').forEach(element => {
+          revealObserver.observe(element);
+        });
+      }
+
+      // Retain native <details> and keyboard interaction; animate only its visible height.
+      const accordions = [];
+      document.querySelectorAll('.faq-list details').forEach(details => {
+        const summary = details.querySelector('summary');
+        const state = {details, animation:null, targetOpen:details.open};
+        accordions.push(state);
+        summary.addEventListener('click', event => {
+          if (preference.matches || !canAnimate) return;
+          event.preventDefault();
+          const from = details.getBoundingClientRect().height;
+          const opening = state.animation ? !state.targetOpen : !details.open;
+          if (state.animation) state.animation.cancel();
+          state.targetOpen = opening;
+          details.open = true;
+          const css = getComputedStyle(details);
+          const borders = parseFloat(css.borderTopWidth) + parseFloat(css.borderBottomWidth);
+          const to = opening ? details.getBoundingClientRect().height : summary.getBoundingClientRect().height + borders;
+          details.style.overflow = 'hidden';
+          const animation = play(details, [{height:`${from}px`}, {height:`${to}px`}], {duration:250});
+          state.animation = animation;
+          const settle = () => {
+            if (state.animation !== animation) return;
+            details.open = state.targetOpen;
+            details.style.removeProperty('overflow');
+            state.animation = null;
+          };
+          animation.onfinish = settle;
+          animation.oncancel = settle;
+        });
+      });
+
+      // A booking click takes the visitor to the actual form, including on narrow screens.
+      const card = document.getElementById('applyCard');
+      let arrivalObserver;
+      let arrivalAnimation;
+      function highlightBooking() {
+        if (arrivalAnimation) arrivalAnimation.cancel();
+        arrivalAnimation = play(card, [
+          {boxShadow:'0 0 0 0 rgba(218,252,103,0), 7px 7px 0 #111511'},
+          {boxShadow:'0 0 0 6px rgba(218,252,103,.8), 7px 7px 0 #111511', offset:0.3},
+          {boxShadow:'0 0 0 0 rgba(218,252,103,0), 7px 7px 0 #111511'}
+        ], {duration:900});
+      }
+      document.querySelectorAll('a[href="#hen-dong"]').forEach(link => {
+        link.addEventListener('click', event => {
+          if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          if (arrivalObserver) arrivalObserver.disconnect();
+          // History updates can be restricted in local file previews; scrolling still works.
+          if (location.hash !== '#hen-dong') {
+            try { history.pushState(null, '', '#hen-dong'); } catch (_) { /* Keep the local preview usable. */ }
+          }
+          card.focus({preventScroll:true});
+          card.scrollIntoView({behavior:preference.matches ? 'auto' : 'smooth', block:'start'});
+          if (canObserve && !preference.matches) {
+            arrivalObserver = new IntersectionObserver(entries => {
+              if (!entries.some(entry => entry.isIntersecting)) return;
+              arrivalObserver.disconnect();
+              highlightBooking();
+            }, {threshold:0.3});
+            arrivalObserver.observe(card);
+          }
+        });
+      });
+
+      // If the OS preference changes mid-animation, finish safely and keep all controls usable.
+      function reduceMotion() {
+        if (!preference.matches) return;
+        if (revealObserver) revealObserver.disconnect();
+        if (arrivalObserver) arrivalObserver.disconnect();
+        accordions.forEach(state => {
+          const animation = state.animation;
+          state.animation = null;
+          if (animation) {
+            animation.cancel();
+            state.details.open = state.targetOpen;
+            state.details.style.removeProperty('overflow');
+          }
+        });
+        active.forEach(animation => animation.cancel());
+      }
+      if (preference.addEventListener) preference.addEventListener('change', reduceMotion);
+      else if (preference.addListener) preference.addListener(reduceMotion);
+      window.addEventListener('pagehide', () => {
+        if (revealObserver) revealObserver.disconnect();
+        if (arrivalObserver) arrivalObserver.disconnect();
+      });
+    })();
+  </script>
+</body>
+</html>

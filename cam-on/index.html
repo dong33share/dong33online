@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mình đã nhận thông tin | Đông33</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="/assets/fonts/nexa-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/product-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/funnel.css">
+  <style>
+    .page{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+    main{flex:1;display:flex;align-items:center;padding:20px 0 72px}
+    .inner{max-width:620px}
+    .person{display:flex;align-items:center;gap:14px}
+    .person img{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:50% 26%;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--sage)}
+    .person b{display:block;font-family:var(--display);font-size:17px;letter-spacing:.03em}
+    .person span{font-size:13px;color:var(--muted)}
+    h1{margin-top:30px;font-size:clamp(32px,5.6vw,50px)}
+    .lead{margin-top:16px;font-size:18px;line-height:1.7;color:#3d443f}
+    .steps{list-style:none;margin-top:30px;background:var(--paper);border:var(--line);border-radius:22px;padding:6px 22px;box-shadow:var(--shadow)}
+    .steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:var(--line);font-size:16px;line-height:1.55}
+    .steps li:last-child{border:0}
+    .steps li span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--sage);color:var(--forest);font:700 13px/1 var(--text)}
+    .next{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+    .btn-ghost{padding:0;background:none;box-shadow:none;color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:rgba(31,77,54,.4);text-decoration-thickness:1.5px;text-underline-offset:6px}
+    @media(max-width:560px){.lead{font-size:16px}.next .btn-primary{width:100%}.steps{padding:4px 18px}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="wrap topbar">
+      <a class="brand" href="/">Đông<span>33.</span></a>
+    </header>
+    <main>
+      <div class="wrap">
+        <div class="inner">
+          <div class="person"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="58" height="58"><div><b>Nguyễn Lê Đông</b><span>Senior Unit Manager · Manulife Việt Nam</span></div></div>
+          <h1 id="title">Mình nhận được rồi nha.</h1>
+          <p class="lead" id="lead">Mình sẽ nhắn bạn qua Zalo để thống nhất bước tiếp theo.</p>
+          <ol class="steps" id="steps"></ol>
+          <div class="next">
+            <a class="btn btn-primary" href="/about">Đọc thêm về mình <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="https://m.me/trambaohiemonline" target="_blank" rel="noopener">Nhắn Trạm Bảo Hiểm <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/assets/lead.js"></script>
+  <script>
+    const COPY = {
+      'tu-van': {
+        title: 'Cảm ơn bạn, mình nhận được rồi nha.',
+        lead: 'Mình đã có kết quả định giá của bạn, nên lúc gặp mình đi thẳng vào phần cần làm rõ, không hỏi lại từ đầu.',
+        steps: ['Mình nhắn bạn qua Zalo, hỏi thêm vài điều và chọn lúc tiện để trao đổi.', 'Mình với bạn soát lại từng con số trong kết quả định giá.', 'Bạn quyết định có đi tiếp hay chưa. Không có áp lực mua.']
+      },
+      'ra-soat': {
+        title: 'Mình nhận được rồi, mình cùng đọc hợp đồng nha.',
+        lead: 'Mình đã có kết quả khảo sát của bạn, nên sẽ bắt đầu từ những chỗ còn mơ hồ.',
+        steps: ['Mình nhắn Zalo để hẹn thời gian và chỉ bạn chuẩn bị hợp đồng.', 'Mình với bạn cùng đọc những phần bạn chưa rõ.', 'Việc rà soát không mặc định dẫn đến mua thêm.']
+      }
+    };
+    const c = COPY[new URLSearchParams(location.search).get('loai')];
+    if (c) {
+      document.getElementById('title').textContent = c.title;
+      document.getElementById('lead').textContent = c.lead;
+      document.getElementById('steps').innerHTML = c.steps.map((s, i) => `<li><span>0${i + 1}</span>${s}</li>`).join('');
+    } else {
+      document.getElementById('steps').hidden = true;
+    }
+    Dong33Lead.noOrphans('h1,.lead,.steps li');
+  </script>
+</body>
+</html>

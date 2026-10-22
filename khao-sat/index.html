@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hợp đồng của bạn rõ đến đâu? | Đông33</title>
+  <meta name="description" content="6 câu hỏi trong 2 phút để biết bạn đã hiểu hợp đồng bảo hiểm nhân thọ của mình đến đâu.">
+  <meta name="theme-color" content="#f3f2ee">
+  <link rel="canonical" href="https://dong33.online/khao-sat/">
+  <link rel="preload" href="/assets/fonts/nexa-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/product-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/funnel.css">
+  <style>
+    .score{display:flex;align-items:baseline;gap:10px}
+    .score small{font-family:var(--text);font-size:16px;color:#d6e1d4}
+    .gaps{list-style:none;padding:6px 26px 10px}
+    .gaps li{padding:14px 0;border-bottom:var(--line);font-size:15px;display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center}
+    .gaps li:last-child{border:0}
+    .gaps .tag{white-space:nowrap;font-family:var(--text);font-weight:700;font-size:12px;letter-spacing:.03em;padding:4px 9px;border-radius:999px;text-align:center}
+    .tag.unclear{background:#f6eecb;color:#6b5512}
+    .tag.unknown{background:var(--ink);color:#fff}
+    .tag.clear{background:var(--sage);color:var(--forest)}
+    @media(max-width:560px){.gaps{padding:4px 20px 8px}.gaps li{gap:11px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap quiz-top">
+      <a class="brand" href="/">Đông<span>33.</span></a>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+  </header>
+
+  <main class="stage">
+    <section class="screen" data-screen="intro">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Chào bạn, mình là Đông. Mình làm khách hàng bảo hiểm 12 năm trước khi vào nghề, nên mình biết người mua cần rõ những gì.</p></div>
+      <span class="label">Khảo sát 2 phút</span>
+      <h1>Đã đóng phí, nhưng bạn hiểu hợp đồng của mình đến đâu?</h1>
+      <p class="hint">6 câu hỏi mà người đã mua bảo hiểm nên trả lời được. Không cần mở hợp đồng, cứ trả lời theo những gì bạn đang nhớ.</p>
+      <div class="next-row"><button class="btn btn-primary" type="button" id="start">Bắt đầu</button></div>
+    </section>
+
+    <section class="screen" data-screen="channel">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Mua qua kênh nào cũng được, mình hỏi để biết nên bắt đầu đọc từ đâu.</p></div>
+      <span class="label">Trước tiên</span>
+      <h2>Bạn mua hợp đồng qua đâu?</h2>
+      <div class="options">
+        <button class="option" type="button" data-channel="Đại lý / tư vấn viên">Qua đại lý, tư vấn viên</button>
+        <button class="option" type="button" data-channel="Ngân hàng">Qua ngân hàng</button>
+        <button class="option" type="button" data-channel="Người thân mua giúp / khác">Người thân mua giúp, hoặc kênh khác</button>
+      </div>
+    </section>
+
+    <div id="questions"></div>
+
+    <section class="screen" data-screen="result">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Cảm ơn bạn đã trả lời thật lòng. Đây là những chỗ mình nghĩ nên đọc lại trước.</p></div>
+      <span class="label">Kết quả</span>
+      <h2 id="resultTitle"></h2>
+      <div class="result-card">
+        <div class="result-head">
+          <span class="label">Mức độ rõ ràng về hợp đồng</span>
+          <div class="score"><span class="big" id="score"></span><small>/ 6 điều đã rõ</small></div>
+          <p id="resultNote"></p>
+        </div>
+        <ul class="gaps" id="gaps"></ul>
+      </div>
+      <p class="teach">Mua rồi mà chưa rõ là chuyện rất thường gặp. Điều quan trọng là làm rõ trước khi cần dùng đến, không phải lúc đang cần.</p>
+
+      <h3 style="margin-top:40px;font-size:24px">Làm rõ cùng mình</h3>
+      <div class="offers">
+        <button class="offer" type="button" id="toLead"><h3>Đọc hợp đồng cùng mình</h3><p>30 phút đi qua những điểm còn mơ hồ. Hợp đồng ngoài Manulife cũng được.</p><span class="arrow" aria-hidden="true">→</span></button>
+        <a class="offer alt" href="/dinh-gia/" style="text-decoration:none"><h3>Định giá sinh mệnh</h3><p>Xem số tiền bảo hiểm gia đình bạn cần, so với số đang có.</p><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="lead">
+      <div class="say"><img src="/assets/dong-avatar.jpg?v=5" alt="" width="44" height="44"><p>Bạn chưa cần gửi hợp đồng ở bước này. Mình nhắn Zalo rồi hai bên hẹn sau nha.</p></div>
+      <span class="label">Đọc hợp đồng cùng mình</span>
+      <h2>Để lại thông tin, mình nhắn bạn qua Zalo</h2>
+      <p class="hint">Mình trao đổi qua điện thoại hoặc online trước, bạn ở đâu cũng được. Việc rà soát không mặc định dẫn đến mua thêm.</p>
+      <form class="lead-form" id="leadForm" novalidate>
+        <div><label for="name">Tên của bạn</label><input id="name" name="name" autocomplete="name" placeholder="Mình nên gọi bạn là…" maxlength="100" required></div>
+        <div><label for="phone">Số điện thoại / Zalo</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09 1234 5678" maxlength="24" required></div>
+        <div><label for="note">Điều bạn muốn làm rõ nhất <span class="opt">(không bắt buộc)</span></label><textarea id="note" name="note" maxlength="1000" placeholder="Ví dụ: Hợp đồng mua qua ngân hàng năm 2021, chưa rõ phần tích luỹ."></textarea></div>
+        <p class="consent">Bằng việc gửi, bạn đồng ý để mình (Nguyễn Lê Đông) liên hệ qua số điện thoại/Zalo này. Chưa cần gửi hợp đồng hay giấy tờ cá nhân ở bước này.</p>
+        <button class="btn btn-primary btn-block" type="submit" id="leadSubmit">Gửi cho mình</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div class="next-row"><button class="back" type="button" id="back" hidden>← Quay lại</button></div>
+  </main>
+
+  <script src="/assets/lead.js"></script>
+  <script>
+    const QUESTIONS = [
+      {short: 'Số tiền gia đình nhận được', q: 'Nếu bạn không thể tiếp tục lo cho gia đình, hợp đồng trả bao nhiêu và trả cho ai?'},
+      {short: 'Đóng phí đến khi nào', q: 'Bạn phải đóng phí đến năm nào, và nếu ngừng đóng thì hợp đồng ra sao?'},
+      {short: 'Trường hợp không được chi trả', q: 'Bạn biết những trường hợp hợp đồng chưa hoặc không chi trả? (thời gian chờ, điều khoản loại trừ)'},
+      {short: 'Người nhà biết hợp đồng', q: 'Người thân của bạn có biết hợp đồng này và biết liên hệ ai khi cần?'},
+      {short: 'Quyền lợi nằm viện, sức khoẻ', q: 'Khi nằm viện hoặc điều trị dài ngày, bạn biết mình được chi trả những gì và nộp hồ sơ thế nào?'},
+      {short: 'Giá trị tích luỹ', q: 'Phần tích luỹ trong hợp đồng hiện có bao nhiêu so với số tiền bạn đã đóng?'}
+    ];
+    const ANSWERS = [['clear','Rõ'], ['unclear','Mơ hồ'], ['unknown','Chưa biết']];
+    const state = {channel: '', answers: []};
+
+    document.getElementById('questions').innerHTML = QUESTIONS.map((item, i) => `
+      <section class="screen" data-screen="q${i}">
+        <span class="label">Câu ${i + 1} / ${QUESTIONS.length}</span>
+        <h2>${item.q}</h2>
+        <div class="options">${ANSWERS.map(([v, t]) => `<button class="option" type="button" data-q="${i}" data-value="${v}">${t}</button>`).join('')}</div>
+      </section>`).join('');
+
+    const order = ['intro', 'channel', ...QUESTIONS.map((_, i) => 'q' + i), 'result', 'lead'];
+    const trail = [];
+    let current = 'intro';
+    const backBtn = document.getElementById('back');
+
+    function show(id, push = true) {
+      if (push && current !== id) trail.push(current);
+      current = id;
+      document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.dataset.screen === id));
+      const idx = order.indexOf(id);
+      const qIndex = id.startsWith('q') ? Number(id.slice(1)) + 1 : 0;
+      document.getElementById('bar').style.width = Math.min(100, Math.max(4, idx / (order.length - 2) * 100)) + '%';
+      document.getElementById('count').textContent = qIndex ? `${qIndex} / ${QUESTIONS.length}` : id === 'result' || id === 'lead' ? 'Kết quả' : '';
+      backBtn.hidden = trail.length === 0 || id === 'result';
+      window.scrollTo({top:0});
+    }
+    backBtn.addEventListener('click', () => { if (trail.length) show(trail.pop(), false); });
+
+    function pick(btn) {
+      btn.parentElement.querySelectorAll('.option').forEach(o => o.setAttribute('aria-pressed', String(o === btn)));
+    }
+    document.getElementById('start').addEventListener('click', () => show('channel'));
+    document.querySelectorAll('[data-channel]').forEach(btn => btn.addEventListener('click', () => {
+      pick(btn); state.channel = btn.dataset.channel; setTimeout(() => show('q0'), 220);
+    }));
+    document.querySelectorAll('[data-q]').forEach(btn => btn.addEventListener('click', () => {
+      pick(btn);
+      const i = Number(btn.dataset.q);
+      state.answers[i] = btn.dataset.value;
+      setTimeout(() => i + 1 < QUESTIONS.length ? show('q' + (i + 1)) : showResult(), 220);
+    }));
+
+    function showResult() {
+      const clear = state.answers.filter(a => a === 'clear').length;
+      document.getElementById('score').textContent = clear;
+      const title = clear >= 5 ? 'Bạn nắm khá chắc hợp đồng của mình.' : clear >= 3 ? 'Bạn rõ một phần, vẫn còn vài điểm mơ hồ.' : 'Phần lớn hợp đồng vẫn còn mơ hồ với bạn.';
+      const note = clear >= 5 ? 'Nên kiểm tra lại khi gia đình có thay đổi: thêm con, vay mua nhà, thu nhập tăng.' : 'Những điểm dưới đây là nơi nên bắt đầu đọc lại hợp đồng.';
+      document.getElementById('resultTitle').textContent = title;
+      document.getElementById('resultNote').textContent = note;
+      const rank = {unknown: 0, unclear: 1, clear: 2};
+      const label = {clear: 'Rõ', unclear: 'Mơ hồ', unknown: 'Chưa biết'};
+      document.getElementById('gaps').innerHTML = QUESTIONS.map((item, i) => ({item, a: state.answers[i]}))
+        .sort((x, y) => rank[x.a] - rank[y.a])
+        .map(({item, a}) => `<li><span class="tag ${a}">${label[a]}</span><span>${item.short}</span></li>`).join('');
+      show('result');
+    }
+
+    document.getElementById('toLead').addEventListener('click', () => show('lead'));
+
+    const form = document.getElementById('leadForm');
+    const status = document.getElementById('status');
+    let sending = false;
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (sending) return;
+      const nameEl = form.elements.namedItem('name'), phoneEl = form.elements.namedItem('phone');
+      const name = nameEl.value.trim(), phone = phoneEl.value.trim(), note = form.elements.namedItem('note').value.trim();
+      status.textContent = '';
+      nameEl.removeAttribute('aria-invalid'); phoneEl.removeAttribute('aria-invalid');
+      if (!name) { status.textContent = 'Bạn cho mình biết tên để tiện xưng hô nhé.'; nameEl.setAttribute('aria-invalid','true'); nameEl.focus(); return; }
+      if (!Dong33Lead.validPhone(phone)) { status.textContent = 'Bạn kiểm tra lại số điện thoại/Zalo giúp mình nhé.'; phoneEl.setAttribute('aria-invalid','true'); phoneEl.focus(); return; }
+      const label = {clear: 'Rõ', unclear: 'Mơ hồ', unknown: 'Chưa biết'};
+      const summary = [
+        `Kênh mua: ${state.channel}`,
+        `Điểm rõ ràng: ${state.answers.filter(a => a === 'clear').length}/6`,
+        ...QUESTIONS.map((item, i) => `${item.short}: ${label[state.answers[i]]}`)
+      ].join('\n');
+      const submit = document.getElementById('leadSubmit');
+      sending = true; submit.disabled = true; submit.textContent = 'Đang gửi…';
+      try {
+        await Dong33Lead.send({name, phone, goal: 'Khảo sát — Đọc hợp đồng cùng Đông', note: [note && `Lời nhắn: ${note}`, summary].filter(Boolean).join('\n'), source: 'dong33-khao-sat'});
+        location.href = '/cam-on/?loai=ra-soat';
+      } catch (err) {
+        status.textContent = 'Kết nối chưa thành công. Bạn thử lại, hoặc nhắn mình qua Zalo 08 3343 1179.';
+        sending = false; submit.disabled = false; submit.textContent = 'Gửi cho mình';
+      }
+    });
+
+    Dong33Lead.noOrphans('h1,h2,.hint,.teach,.offer p');
+    show('intro', false);
+  </script>
+</body>
+</html>
